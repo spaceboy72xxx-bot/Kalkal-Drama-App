@@ -1,3 +1,33 @@
+/* ======================================
+   KALKAL — Short Drama App
+   Complete Stylesheet
+====================================== */
+
+/* --- VARIABLES --- */
+:root {
+    --primary: #e94560;
+    --secondary: #ffffff;
+    --accent: #f5f5f5;
+    --text: #1a1a2e;
+    --gray: #777777;
+    --light-gray: #e0e0e0;
+}
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--secondary);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
 /* --- SPLASH SCREEN --- */
 #splash-screen {
     position: fixed;
@@ -23,13 +53,13 @@
 
 .splash-text {
     font-size: 2.5rem;
-    color: #e94560;
+    color: var(--primary);
     margin-bottom: 0.5rem;
 }
 
 .splash-sub {
     font-size: 1rem;
-    color: #777777;
+    color: var(--gray);
 }
 
 @keyframes pulse {
@@ -40,4 +70,228 @@
 
 @keyframes fadeOut {
     to { opacity: 0; visibility: hidden; }
+}
+
+/* --- HEADER --- */
+.app-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+/* --- TABS NAVIGATION --- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: var(--accent);
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.tab-btn {
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--gray);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: var(--text);
+    background: rgba(233, 69, 96, 0.05);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+/* --- CONTAINER --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* --- TABS CONTENT --- */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+/* --- DRAMA GRID --- */
+.drama-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.drama-card {
+    background: var(--accent);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.drama-card:hover {
+    transform: translateY(-5px);
+}
+
+.drama-media {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #000000;
+}
+
+.drama-info {
+    padding: 1rem;
+}
+
+.drama-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.drama-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.drama-date {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+/* --- FORM STYLES --- */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--text);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* --- BUTTONS --- */
+.upload-btn,
+.save-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.upload-btn {
+    background: var(--primary);
+    color: #ffffff;
+    width: 100%;
+}
+
+.upload-btn:hover {
+    background: #d63852;
+}
+
+.status-text {
+    margin-top: 0.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.save-btn {
+    background: #4CAF50;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.save-btn:hover {
+    background: #45a049;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 480px) {
+    .drama-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .splash-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .splash-text {
+        font-size: 2rem;
+    }
+    
+    .tab-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
 }
