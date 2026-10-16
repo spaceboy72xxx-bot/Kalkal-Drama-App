@@ -1,6 +1,6 @@
 // === CLOUDINARY SETUP ===
 // Palitan ito ng sarili mong Cloudinary cloud name
-const CLOUD_NAME = 'palitan-ito'; 
+const CLOUD_NAME = 'palitan-ito';
 
 // === MGA ELEMENTO ===
 const tabButtons = document.querySelectorAll('.tab-btn');
@@ -32,7 +32,7 @@ tabButtons.forEach(btn => {
 // === CLOUDINARY UPLOAD ===
 let myWidget = window.cloudinary.createUploadWidget({
     cloudName: CLOUD_NAME,
-    uploadPreset: 'kalkal_upload', // Gawin ito sa Cloudinary settings
+    uploadPreset: 'kalkal_upload',
     multiple: false,
     resourceType: 'auto'
 }, (error, result) => {
