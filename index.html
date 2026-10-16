@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkal</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="icon" href="https://picsum.photos/192/192">
+    
+    <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1 class="logo">🎬 Kalkal</h1>
+        <p class="subtitle">Short Drama</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-btn active" data-tab="home">Home</button>
+        <button class="tab-btn" data-tab="upload">Upload</button>
+    </nav>
+
+    <main class="container">
+
+        <section id="home" class="tab-content active">
+            <h2>Mga Drama</h2>
+            <div id="drama-list" class="drama-grid"></div>
+        </section>
+
+        <section id="upload" class="tab-content">
+            <h2>Mag-upload</h2>
+            
+            <div class="form-group">
+                <label>Pamagat</label>
+                <input type="text" id="drama-title" placeholder="Ilagay ang pamagat">
+            </div>
+
+            <div class="form-group">
+                <label>Deskripsyon</label>
+                <textarea id="drama-desc" placeholder="Maikling kwento"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Video o Larawan</label>
+                <button id="cloudinary-upload" class="upload-btn">Pumili ng File</button>
+                <p id="upload-status" class="status-text">Wala pang napipili</p>
+                <input type="hidden" id="media-url">
+            </div>
+
+            <button id="save-drama" class="save-btn">I-save</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kalkal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
