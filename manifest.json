@@ -3,6 +3,7 @@
     "short_name": "Kalkal",
     "description": "Short Drama App",
     "start_url": "./index.html",
+    "scope": "./",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
