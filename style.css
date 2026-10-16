@@ -1,9 +1,9 @@
 :root {
     --primary: #e94560;
-    --secondary: #1a1a2e;
-    --accent: #16213e;
-    --light: #f1f1f1;
-    --gray: #a0a0a0;
+    --secondary: #ffffff;
+    --accent: #f5f5f5;
+    --text: #1a1a2e;
+    --gray: #777777;
 }
 
 * {
@@ -15,14 +15,14 @@
 
 body {
     background: var(--secondary);
-    color: var(--light);
+    color: var(--text);
     min-height: 100vh;
 }
 
 .app-header {
     text-align: center;
     padding: 2rem 1rem;
-    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
 }
 
 .logo {
@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     background: var(--accent);
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .tab-btn {
@@ -53,8 +53,8 @@ body {
 }
 
 .tab-btn:hover {
-    color: var(--light);
-    background: rgba(233, 69, 96, 0.1);
+    color: var(--text);
+    background: rgba(233, 69, 96, 0.05);
 }
 
 .tab-btn.active {
@@ -99,6 +99,7 @@ h2 {
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .drama-card:hover {
@@ -119,6 +120,7 @@ h2 {
 .drama-title {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: var(--text);
 }
 
 .drama-desc {
@@ -133,16 +135,17 @@ h2 {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 6px;
-    background: var(--accent);
-    color: var(--light);
+    background: #fff;
+    color: var(--text);
     font-size: 1rem;
 }
 
@@ -193,4 +196,5 @@ footer {
     color: var(--gray);
     font-size: 0.9rem;
     margin-top: 2rem;
+    border-top: 1px solid #eee;
 }
