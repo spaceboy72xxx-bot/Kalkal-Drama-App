@@ -1,6 +1,6 @@
 // === CLOUDINARY SETUP ===
 // Palitan ito ng sarili mong Cloudinary cloud name
-const CLOUD_NAME = 'palitan-ito';
+const CLOUD_NAME = 'yvoumj23';
 
 // === MGA ELEMENTO ===
 const tabButtons = document.querySelectorAll('.tab-btn');
